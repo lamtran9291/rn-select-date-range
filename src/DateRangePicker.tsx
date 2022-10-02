@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   View,
   Text,
@@ -28,7 +28,7 @@ interface IProps {
   selectedDateStyle?: TextStyle;
   ln?: string;
   onConfirm?: () => void;
-  onClear?:() => void;
+  onClear?: () => void;
   clearBtnTitle?: string;
   confirmBtnTitle?: string;
   startDate?: moment.Moment;
@@ -54,8 +54,8 @@ const DateRangePicker = ({
 }: IProps) => {
   const [selectedDate, setSelectedDate] = useState(moment());
 
-  const [firstDate, setFirstDate] = useState<moment.Moment | null>(startDate || null);
-  const [secondDate, setSecondDate] = useState<moment.Moment | null>(endDate || null);
+  const [firstDate, setFirstDate] = useState<moment.Moment | null>(null);
+  const [secondDate, setSecondDate] = useState<moment.Moment | null>(null);
 
   const lastMonth = selectedDate.clone().subtract(1, "months");
   const lastYear = selectedDate.clone().subtract(1, "years");
@@ -125,6 +125,16 @@ const DateRangePicker = ({
   }
 
   const isDateSelected = () => firstDate === null || secondDate === null;
+
+  useEffect(() => {
+    if (startDate != null) {
+      onSelectDate(startDate);
+    }
+
+    if (endDate != null) {
+      onSelectDate(endDate);
+    }
+  }, [])
 
   return (
     <View>

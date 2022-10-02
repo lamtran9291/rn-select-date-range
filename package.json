@@ -1,7 +1,7 @@
 {
-  "name": "@lamtran9291/rn-select-date-range",
-  "version": "3.3.1",
-  "description": "@lamtran9291 version of rn-select-date-range that include improvement from the original",
+  "name": "@lamtran91/rn-select-date-range",
+  "version": "3.3.3",
+  "description": "@lamtran91 version of rn-select-date-range that include improvement from the original",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dilipchandima/rn-date-range-picker.git"
+    "url": "git+https://github.com/lamtran9291/rn-select-date-range.git"
   },
   "keywords": [
     "react-native",

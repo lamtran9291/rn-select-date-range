@@ -54,8 +54,8 @@ const DateRangePicker = ({
 }: IProps) => {
   const [selectedDate, setSelectedDate] = useState(moment());
 
-  const [firstDate, setFirstDate] = useState<moment.Moment | undefined>(startDate);
-  const [secondDate, setSecondDate] = useState<moment.Moment | undefined>(endDate);
+  const [firstDate, setFirstDate] = useState<moment.Moment | null>(null);
+  const [secondDate, setSecondDate] = useState<moment.Moment | null>(null);
 
   const lastMonth = selectedDate.clone().subtract(1, "months");
   const lastYear = selectedDate.clone().subtract(1, "years");
@@ -126,11 +126,11 @@ const DateRangePicker = ({
 
   const isDateSelected = () => firstDate === null || secondDate === null;
 
-  if (startDate) {
+  if (startDate && firstDate != startDate) {
     setFirstDate(startDate);
   }
 
-  if (endDate) {
+  if (endDate && endDate != endDate) {
     setSecondDate(endDate);
   }
 

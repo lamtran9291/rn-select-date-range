@@ -31,6 +31,8 @@ interface IProps {
   onClear?:() => void;
   clearBtnTitle?: string;
   confirmBtnTitle?: string;
+  startDate?: moment.Moment;
+  endDate?: moment.Moment;
 }
 
 const DateRangePicker = ({
@@ -46,7 +48,9 @@ const DateRangePicker = ({
   onConfirm,
   onClear,
   clearBtnTitle = "Clear",
-  confirmBtnTitle = "OK"
+  confirmBtnTitle = "OK",
+  startDate,
+  endDate
 }: IProps) => {
   const [selectedDate, setSelectedDate] = useState(moment());
 
@@ -121,6 +125,14 @@ const DateRangePicker = ({
   }
 
   const isDateSelected = () => firstDate === null || secondDate === null;
+
+  if (startDate) {
+    setFirstDate(startDate);
+  }
+
+  if (endDate) {
+    setSecondDate(endDate);
+  }
 
   return (
     <View>

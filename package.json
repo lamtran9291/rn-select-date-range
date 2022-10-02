@@ -1,7 +1,7 @@
 {
-  "name": "rn-select-date-range",
-  "version": "3.3.0",
-  "description": "A simple and fully customizable React Native date range picker component",
+  "name": "@lamtran9291/rn-select-date-range",
+  "version": "3.3.1",
+  "description": "@lamtran9291 version of rn-select-date-range that include improvement from the original",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
@@ -36,10 +36,6 @@
   ],
   "author": "Dileepa Chandima",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dilipchandima/rn-date-range-picker/issues"
-  },
-  "homepage": "https://github.com/dilipchandima/rn-date-range-picker#readme",
   "peerDependencies": {
     "react": "17.0.2",
     "react-native": "0.66.2"

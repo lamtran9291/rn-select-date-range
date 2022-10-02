@@ -1,6 +1,6 @@
 {
   "name": "@lamtran91/rn-select-date-range",
-  "version": "3.3.6",
+  "version": "3.3.7",
   "description": "@lamtran91 version of rn-select-date-range that include improvement from the original",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
